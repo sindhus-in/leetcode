@@ -3,7 +3,7 @@
  * @return {boolean}
  */
 var isPalindrome = function(x) {
-    if ( Math.sign(x) == -1) {
+    if (Math.sign(x) == -1) {
         return false;
     }
 
@@ -15,7 +15,7 @@ var isPalindrome = function(x) {
         result.push(copyOfX.pop());
     }
     
-    if ( x.toString() === result.join('')) {
+    if (x.toString() === result.join('')) {
         return true
     } else {
         return false

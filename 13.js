@@ -58,7 +58,7 @@ var romanToIntV2 = function(s) {
                 // M C -> M X C I V
                 // 1000 > 100
                 // 1100 (previousValue) + 1000 - 2 * 100 (BODMAS - Bracket, Order, Division, Multiplication, Addition, Subtraction)
-                // 1800
+                // 1900
                 result += currentValue - 2 * previousValue
             } else {
                 result += currentValue
