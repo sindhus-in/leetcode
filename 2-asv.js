@@ -52,3 +52,31 @@ console.log(
     addTwoNumbers(createLink([2, 4, 3]), 
                   createLink([5, 6, 4])))
 
+
+function addTwoWithCarryWithLoop(l1, l2) {
+    const ret = new ListNode()
+    const ptr = ret
+
+    while (carry !=0 || l1 != null || l2 != null) {
+        ptr.next = new ListNode()
+        ptr = ptr.next
+
+        const current = value(l1) + value(l2) + carry 
+        const lastDigit = current > 9 ? current - 10 : current
+        const newCarry = current > 9 ? 1 : 0
+
+        ptr.val = lastDigit 
+        carry = newCarry
+        
+        l1 = next(l1)
+        l2 = next(l2) 
+    }
+
+    return ret.next;
+
+    // const current = value(l1) + value(l2) + carry 
+    // const lastDigit = current > 9 ? current - 10 : current
+    // const newCarry = current > 9 ? 1 : 0
+    // const rhs = addTwoWithCarry(next(l1), next(l2), newCarry)
+    // return new ListNode(lastDigit, rhs)
+}
